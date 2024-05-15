@@ -12,18 +12,11 @@ The code is structured into several functions, each handling a specific part of 
 - `get_all_pdfs_chunks`: Processes multiple PDFs and aggregates the text chunks.
 - `get_vector_store`: Creates a vector store from the text chunks using embeddings.
   
-  ```
-  embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
-  ```
-  This line initializes an embedding model, which is used to convert text into embeddings. The GoogleGenerativeAIEmbeddings likely refers to a pre-trained model provided by Google that can generate embeddings for text.
-  ```
-  vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
-  ```
-  This line takes the text chunks, uses the embeddings model to convert them into embeddings, and then stores these embeddings in a vector store using FAISS. FAISS is a library for efficient similarity search and clustering of dense vectors
-  ```
-  relevant_content = vectorstore.similarity_search(user_query, k=10)
-  ```
-  This line takes the user’s query, converts it into an embedding using the same model, and then performs a similarity search in the vector store to find the top k (in this case, 10) most similar text chunks. It retrieves the relevant content based on the similarity to the user’s query.
+  ` embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")` : This line initializes an embedding model, which is used to convert text into embeddings. The GoogleGenerativeAIEmbeddings likely refers to a pre-trained model provided by Google that can generate embeddings for text.
+  
+  `vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)` : This line takes the text chunks, uses the embeddings model to convert them into embeddings, and then stores these embeddings in a vector store using FAISS. FAISS is a library for efficient similarity search and clustering of dense vectors
+  
+  `relevant_content = vectorstore.similarity_search(user_query, k=10)` : This line takes the user’s query, converts it into an embedding using the same model, and then performs a similarity search in the vector store to find the top k (in this case, 10) most similar text chunks. It retrieves the relevant content based on the similarity to the user’s query.
 
 - `get_response`: Generates a response based on the context and question provided by the user.
 - `working_process`: Orchestrates the interaction with the user and manages the chat history.
