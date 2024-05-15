@@ -2,6 +2,8 @@ streamlit
 google-generativeai
 PyPDF2
 python-dotenv
+langchain
 langchain-core
 langchain-community
-faiss-cpu==1.7.1
+faiss-cpu
+langchain_google_genai
