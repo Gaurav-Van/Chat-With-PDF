@@ -1,0 +1,7 @@
+streamlit
+google-generativeai
+PyPDF2
+python-dotenv
+langchain-core
+langchain-community
+faiss-cpu==1.7.1
