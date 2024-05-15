@@ -101,7 +101,7 @@ def main():
     st.set_page_config(page_title="Chat with Multiple PDFs", page_icon=":books:")
     st.header("Chat with Multiple PDFs :books:")
 
-    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+    genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
     generation_config = {
     "temperature": 0.2,
