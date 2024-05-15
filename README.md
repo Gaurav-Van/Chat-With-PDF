@@ -73,10 +73,11 @@ For visual representations of the RAG concept, you can refer to the following li
 To run this application locally, follow these steps:
 
 1. **Clone the Repository**: Download the code to your local machine.
-2. **Install Dependencies**: Use pip to install the required libraries listed in the requirements.txt file.
-3. **Set Up Environment Variables**: Create a `.env` file with your Google API key as `GOOGLE_API_KEY`.
-4. **Start the Application**: Run the `main` function to start the Streamlit server.
-5. **Access the Interface**: Open your web browser and go to http://localhost:8501 to interact with the application.
+2. **Create Virtual Env**: `python -m venv <environment_name`
+3. **Install Dependencies**: Use pip to install the required libraries listed in the requirements.txt file. `pip install -r requirements.txt`
+4. **Set Up Environment Variables**: Create a `.env` file with your Google API key as `GOOGLE_API_KEY`. Replace st.secrets with os.getenv
+5. **Start the Application**: Run the `main` function to start the Streamlit server.
+6. **Access the Interface**: Open your web browser and go to http://localhost:8501 to interact with the application.
 
 ## Usage
 
