@@ -6,6 +6,8 @@ Web app deployed on Streamlit Cloud: https://chat-with-pdf-gj.streamlit.app/
 
 Demo on Youtube: https://youtu.be/bRILkTmaRng?feature=shared
 
+Sped up Demo on Youtube: https://youtu.be/aFvL7Z36KaA?feature=shared
+
 ## Overview
 
 The code is structured into several functions, each handling a specific part of the process:
